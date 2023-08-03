@@ -138,16 +138,50 @@
       // console.log(myYear);
 
       // hour to minute
-      function hourToMimute(hour){
-         let minute = hour * 60;
-         return minute + " minute";
+   //    function hourToMimute(hour){
+   //       let minute = hour * 60;
+   //       return minute + " minute";
+   //    }
+   //    let myHour = hourToMimute(3);
+   //    console.log(myHour);
+   // //   minute to second 
+   // function minuteToSecond(minute){
+   //    let second = minute * 60;
+   //    return second + " second.";;
+   // }
+   // let mySecond = minuteToSecond(60);
+   // console.log(mySecond);
+
+   // sum of odd number find
+function getSumOfAnArray (arrays){
+ let sum = 0;
+ for(let i = 0; i< arrays.length; i++){
+      const index = i;
+      let element = arrays[index];
+      sum += element;
+ }
+ return sum;
+}
+
+   function findOddNumber(arrays){
+      let oddNumber = [];
+      for(let i = 0; i<arrays.length; i++){
+         const index = i;
+         let element = arrays[index];
+         if(element % 2 !==0){
+            // console.log(index,element);
+            oddNumber.push(element);
+         }
       }
-      let myHour = hourToMimute(3);
-      console.log(myHour);
-   //   minute to second 
-   function minuteToSecond(minute){
-      let second = minute * 60;
-      return second + " second.";;
+      return oddNumber;
    }
-   let mySecond = minuteToSecond(60);
-   console.log(mySecond);
+   let arrays = [5, 7, 8, 10, 45, 30];
+
+   let oddNumber = findOddNumber(arrays);
+   console.log(oddNumber);
+   let oddNumberSum = getSumOfAnArray(oddNumber);
+   console.log(oddNumberSum);
+
+
+   let sumOfAnArray = getSumOfAnArray(arrays);
+   console.log(sumOfAnArray);
