@@ -153,35 +153,52 @@
    // console.log(mySecond);
 
    // sum of odd number find
-function getSumOfAnArray (arrays){
- let sum = 0;
- for(let i = 0; i< arrays.length; i++){
-      const index = i;
-      let element = arrays[index];
-      sum += element;
- }
- return sum;
+// function getSumOfAnArray (arrays){
+//  let sum = 0;
+//  for(let i = 0; i< arrays.length; i++){
+//       const index = i;
+//       let element = arrays[index];
+//       sum += element;
+//  }
+//  return sum;
+// }
+
+//    function findOddNumber(arrays){
+//       let oddNumber = [];
+//       for(let i = 0; i<arrays.length; i++){
+//          const index = i;
+//          let element = arrays[index];
+//          if(element % 2 !==0){
+//             // console.log(index,element);
+//             oddNumber.push(element);
+//          }
+//       }
+//       return oddNumber;
+//    }
+//    let arrays = [5, 7, 8, 10, 45, 30];
+
+//    let oddNumber = findOddNumber(arrays);
+//    console.log(oddNumber);
+//    let oddNumberSum = getSumOfAnArray(oddNumber);
+//    console.log(oddNumberSum);
+
+//    let sumOfAnArray = getSumOfAnArray(arrays);
+//    console.log(sumOfAnArray);
+
+function findLeapYear(years){
+   let arrayOfLeapYear = [];
+   for(let i = 0; i< years.length; i++){
+          const index = i;
+          let element = years[index];
+          if(element % 4 ===0){
+            arrayOfLeapYear.push(element);
+      }
+   }
+     return arrayOfLeapYear;
 }
 
-   function findOddNumber(arrays){
-      let oddNumber = [];
-      for(let i = 0; i<arrays.length; i++){
-         const index = i;
-         let element = arrays[index];
-         if(element % 2 !==0){
-            // console.log(index,element);
-            oddNumber.push(element);
-         }
-      }
-      return oddNumber;
-   }
-   let arrays = [5, 7, 8, 10, 45, 30];
+let years = [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030,2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040]
 
-   let oddNumber = findOddNumber(arrays);
-   console.log(oddNumber);
-   let oddNumberSum = getSumOfAnArray(oddNumber);
-   console.log(oddNumberSum);
+let leapYear = findLeapYear(years);
+console.log("This is array of leap year:", leapYear);
 
-
-   let sumOfAnArray = getSumOfAnArray(arrays);
-   console.log(sumOfAnArray);
