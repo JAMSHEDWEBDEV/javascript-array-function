@@ -185,20 +185,52 @@
 //    let sumOfAnArray = getSumOfAnArray(arrays);
 //    console.log(sumOfAnArray);
 
-function findLeapYear(years){
-   let arrayOfLeapYear = [];
-   for(let i = 0; i< years.length; i++){
-          const index = i;
-          let element = years[index];
-          if(element % 4 ===0){
-            arrayOfLeapYear.push(element);
-      }
+// function findLeapYear(years){
+//    let arrayOfLeapYear = [];
+//    for(let i = 0; i< years.length; i++){
+//           const index = i;
+//           let element = years[index];
+//           if(element % 4 ===0){
+//             arrayOfLeapYear.push(element);
+//       }
+//    }
+//      return arrayOfLeapYear;
+// }
+
+// let years = [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030,2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040]
+
+// let leapYear = findLeapYear(years);
+// console.log("This is array of leap year:", leapYear);
+
+
+const friends = ["abul", "kabul", "maful", "cabul", "makul", "abul", "makul", "kobul", "kabul"]
+
+
+function removeDuplicateName(friends){
+   const uniqueName = [];
+   for(let i = 0; i < friends.length; i++){
+         const friend = friends[i];
+         console.log(friend);
+         if(uniqueName.includes(friend) === false){
+            uniqueName.push(friend);
+         }
    }
-     return arrayOfLeapYear;
+   return uniqueName;
 }
 
-let years = [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030,2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040]
+removeDuplicateName(friends);
+console.log(removeDuplicateName(friends));
 
-let leapYear = findLeapYear(years);
-console.log("This is array of leap year:", leapYear);
-
+for(let i = 1; i <= 50; i++){
+    if(i % 3 ===0 && i % 5===0){
+      console.log("foobar");
+    }
+    else if(i % 5 === 0){
+      console.log("bar");
+    }
+    else if(i % 3 === 0 ){
+      console.log("foo");
+    }else{
+      console.log(i);
+    }
+}
